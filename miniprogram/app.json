@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/devices/devices"
+  ],
+  "plugins": {
+    "smartLock": {
+      "version": "1.1.8",
+      "provider": "wx4750a49868f92a31"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

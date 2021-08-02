@@ -1,0 +1,87 @@
+<view>
+  <button catchtap='scanLock'>扫描门锁</button>
+  <button catchtap='openLock'>开锁</button>
+  <button catchtap='sysTime'>同步时钟</button>
+  <button catchtap='readTime'>读取时钟</button>
+  <view class="flex-v flex-vc flex-hc block-area">
+    <view class="flex-h flex-hc  flex-vc ">
+      <text class="sendPsw">密码生效时间: </text>
+      <input class="sendPsw" value="{{lockPswStartTime}}" />
+    </view>
+    <view class="flex-h flex-hc  flex-vc "> 
+      <text class="sendPsw">密码失效时间: </text>
+      <input class="sendPsw" value="{{lockPswEndTime}}" />
+    </view>
+    <view class="flex-h flex-hc  flex-vc ">
+      <text class="sendPsw" class="sendPsw">用户手机号码: </text>
+      <input class="sendPsw" value="{{pswcontact}}" />
+    </view>
+    <view class='flex-h flex-hc flex-vc sendPsw'>
+      <text class="sendPsw">自定义密码: </text>
+      <input class="sendPsw" value="{{openLockPsw}}" />
+    </view>
+    <view class='flex-h flex-hc flex-vc sendPsw'>
+      <button class="sendPsw" catchtap='setOpenLockPsw'>下发密码</button>
+      <button class="sendPsw" catchtap='delOpenLockPsw'>删除密码</button>
+    </view>
+  </view>
+  <view class="flex-v block-area">
+    <view class="flex-h flex-hc  flex-vc ">
+      <text class="sendPsw">卡片生效时间: </text>
+      <input class="sendPsw" value="{{lockCardStartTime}}" />
+    </view>
+    <view class="flex-h flex-hc  flex-vc ">
+      <text class="sendPsw" class="sendPsw">卡片失效时间: </text>
+      <input class="sendPsw" value="{{lockCardEndTime}}" />
+    </view>
+    <view class="flex-h flex-hc  flex-vc ">
+      <text class="sendPsw" class="sendPsw">用户手机号码: </text>
+      <input class="sendPsw" value="{{contact}}" />
+    </view>
+    <view class='flex-h flex-hc sendCard'>
+      <text class="sendPsw" class="sendPsw">IC卡号: </text>
+      <input value="{{openLockCard}}" disabled='true' />
+    </view>
+    <view class='flex-h flex-hc sendCard'>
+      <button catchtap='setLockCard'>添加IC卡</button>
+      <button catchtap='delLockCard'>删除IC卡</button>
+    </view>
+  </view>
+  <view class="flex-v block-area">
+    <view class="flex-h flex-hc  flex-vc ">
+      <text class="sendPsw">指纹生效时间: </text>
+      <input class="sendPsw" value="{{lockFingerprintStartTime}}" />
+    </view>
+    <view class="flex-h flex-hc  flex-vc ">
+      <text class="sendPsw" class="sendPsw">指纹失效时间: </text>
+      <input class="sendPsw" value="{{lockFingerprintEndTime}}" />
+    </view>
+    <view class="flex-h flex-hc  flex-vc ">
+      <text class="sendPsw" class="sendPsw">用户手机号码: </text>
+      <input class="sendPsw" value="{{contact}}" />
+    </view>
+    <view class='flex-h flex-hc sendCard'>
+      <text class="sendPsw" class="sendPsw">指纹ID号: </text>
+      <input value="{{openLockFingerprint}}" disabled='true' />
+    </view>
+    <view class='flex-h flex-hc sendCard'>
+      <button catchtap='learnLockFingerprint'>添加指纹</button>
+      <button catchtap='delFingerPrint'>删除指纹</button>
+    </view>
+  </view>
+  <view class="flex-h block-area">
+    <button catchtap='batterySwitchChanged' data-mode-value1="0">广播模式</button>
+    <button catchtap='batterySwitchChanged' data-mode-value1="1">省电模式</button>
+  </view>
+  <view class="flex-h block-area">
+    <button catchtap='bindLinkDeviceTab' >取电开关绑定门锁/红外/门磁</button>
+  </view>
+  <view class="flex-h flex-hc block-area">
+      <input value="{{switchAutoShutdownDuration}}"  /><text class="sendPsw">秒</text>
+    <button catchtap='changeSwitchTimeMode' >配置取电开关自动断电</button>
+  </view>
+  <view class="flex-h block-area">
+    <button catchtap='setDefaultDevice' >恢复出厂</button>
+  </view>
+  <view style='text-align:center;margin-top:100rpx;'>{{lockId}}</view>
+</view>

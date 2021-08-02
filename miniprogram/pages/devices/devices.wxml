@@ -1,0 +1,12 @@
+<view>
+  <view wx:if="{{noData}}" class="noData">
+    <view style=' text-align: center;'>暂无数据</view>
+  </view>
+  <scroll-view scroll-y="{{scrolly}}">
+    <view wx:for="{{AppkeyList}}" class="lock" data-lock-id="{{item.DATA.KEYLOCKID}}" data-lock-name="{{item.DATA.KEYUSERNAME}}" data-device-type="{{item.DATA.DEVICETYPE}}" bindtap="selectDevice">
+      <view class="lockName" style='padding-top:30rpx;padding-bottom:40rpx;text-align:center;text-size:30rpx;margin:10px;background-color:gray;color:yellow;'>
+        {{item.DATA.KEYUSERNAME}}
+      </view>
+    </view>
+  </scroll-view>
+</view>
